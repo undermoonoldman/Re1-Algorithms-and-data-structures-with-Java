@@ -2,8 +2,14 @@ package com.undermoonoldman.re1.insertion_sort;
 
 /**
  * @author arthurmeng
+ * 两种不同实现的插入排序
  */
 public class InsertionSort {
+    /***
+     * 实现1：每次在比较符合条件时都执行交换操作，直到在该趟中放置到合适的位置。每次交换都带来了开销
+     * @param arr
+     * @param <E>
+     */
     public static <E extends Comparable<E>>  void sort1(E[] arr){
         for(int i = 0; i < arr.length; i++){
             for(int j = i; j > 0; j--){
@@ -16,6 +22,12 @@ public class InsertionSort {
         }
     }
 
+
+    /***
+     * 实现2：用临时变量把某一趟的比较元素存放起来，遇到需要交换的时候，用后移赋值代替，减少了部分开销
+     * @param arr
+     * @param <E>
+     */
     public static <E extends Comparable<E>>  void sort2(E[] arr){
         for(int i = 0; i < arr.length; i++){
             E temp = arr[i];
