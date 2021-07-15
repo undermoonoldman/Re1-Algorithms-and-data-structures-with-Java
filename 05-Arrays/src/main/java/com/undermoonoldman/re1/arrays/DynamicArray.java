@@ -168,6 +168,7 @@ public class DynamicArray<E> {
         data[size] = null;
 
         //为了防止删除操作时数组频繁缩容导致的复杂的震荡，这里采用了lazy机制，当前数组大小减少到容量的四分之一是才将容量减半
+        //防止数组容量为1时缩容为0的情况
         if(size == data.length / 4 && data.length / 2 != 0){
             resize(data.length / 2);
         }
