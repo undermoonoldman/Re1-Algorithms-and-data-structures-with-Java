@@ -14,6 +14,7 @@
         <module>03-Selection-Sort</module>
         <module>04-Insertion-Sort</module>
         <module>05-Arrays</module>
+        <module>06-Stacks-and-Queues</module>
     </modules>
     <packaging>pom</packaging>
 
