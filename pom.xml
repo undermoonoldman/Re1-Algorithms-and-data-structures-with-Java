@@ -15,6 +15,7 @@
         <module>04-Insertion-Sort</module>
         <module>05-Arrays</module>
         <module>06-Stacks-and-Queues</module>
+        <module>07-Linked-List</module>
     </modules>
     <packaging>pom</packaging>
 
