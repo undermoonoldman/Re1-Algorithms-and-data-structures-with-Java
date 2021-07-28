@@ -2,6 +2,7 @@ package com.undermoonoldman.re1.implement_stack_in_linked_list;
 
 /**
  * @author arthurmeng
+ * 链表实现的栈，出栈与入栈操作都在链表的头部进行
  */
 public class LinkedListStack<E> implements Stack<E> {
 
