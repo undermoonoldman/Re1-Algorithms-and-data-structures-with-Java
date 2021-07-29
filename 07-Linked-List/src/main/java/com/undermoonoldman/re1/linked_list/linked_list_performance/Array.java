@@ -1,4 +1,4 @@
-package com.undermoonoldman.re1.implement_queue_in_linked_list;
+package com.undermoonoldman.re1.linked_list.linked_list_performance;
 
 /**
  * @author arthurmeng

@@ -1,4 +1,4 @@
-package com.undermoonoldman.re1.linked_list_performance;
+package com.undermoonoldman.re1.linked_list.linked_list_performance;
 
 public class Main {
 

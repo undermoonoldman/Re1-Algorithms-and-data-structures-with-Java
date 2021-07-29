@@ -1,42 +1,42 @@
-package com.undermoonoldman.re1.implement_stack_in_linked_list;
+package com.undermoonoldman.re1.linked_list.implement_queue_in_linked_list;
 
 /**
  * @author arthurmeng
  */
-public interface Stack<E> {
+public interface Queue<E> {
 
     /***
-     * 获取栈内元素数量
+     * 获取队列中元素个数
      * javadoc
      * @return
      */
     int getSize();
 
     /***
-     * 判断栈是否为空
+     * 判断队列是否为空
      * javadoc
      * @return
      */
     boolean isEmpty();
 
     /***
-     * 元素入栈
+     * 元素入队
      * javadoc
      * @param e
      */
-    void push(E e);
+    void enqueue(E e);
 
     /***
-     * 元素出栈
+     * 元素出队
      * javadoc
      * @return
      */
-    E pop();
+    E dequeue();
 
     /***
-     * 获取栈顶元素
+     * 获取队首元素
      * javadoc
      * @return
      */
-    E peek();
+    E getFront();
 }

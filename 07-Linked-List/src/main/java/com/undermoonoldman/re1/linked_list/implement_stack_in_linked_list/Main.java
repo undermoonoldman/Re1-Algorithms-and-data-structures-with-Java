@@ -1,4 +1,4 @@
-package com.undermoonoldman.re1.implement_stack_in_linked_list;
+package com.undermoonoldman.re1.linked_list.implement_stack_in_linked_list;
 
 import java.util.Random;
 

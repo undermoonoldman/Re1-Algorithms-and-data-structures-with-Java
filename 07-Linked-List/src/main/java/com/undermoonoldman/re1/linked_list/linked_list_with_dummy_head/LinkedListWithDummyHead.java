@@ -1,10 +1,10 @@
-package com.undermoonoldman.re1.linked_list_performance;
+package com.undermoonoldman.re1.linked_list.linked_list_with_dummy_head;
 
 /**
  * @author arthurmeng
+ * 带虚拟头结点的链表，只有带有虚拟头结点才能统一对所有结点的操作逻辑
  */
-public class LinkedList<E> {
-
+public class LinkedListWithDummyHead<E> {
     private class Node{
         public E e;
         public Node next;
@@ -31,12 +31,12 @@ public class LinkedList<E> {
     private Node dummyHead;
     private int size;
 
-    public LinkedList(){
+    public LinkedListWithDummyHead(){
         dummyHead = new Node();
         size = 0;
     }
 
-    /**
+    /***
      * 获取链表中的元素个数
      * @return
      */
@@ -54,7 +54,7 @@ public class LinkedList<E> {
 
     /***
      * 在链表的index(0-based)位置添加新的元素e
-     * 在链表中不是一个常用的操作，练习用：
+     * 在链表中不是一个常用的操作，练习用：）
      * @param index
      * @param e
      */
@@ -132,7 +132,7 @@ public class LinkedList<E> {
      */
     public void set(int index, E e){
         if(index < 0 || index >= size) {
-            throw new IllegalArgumentException("Update failed. Illegal index.");
+            throw new IllegalArgumentException("Set failed. Illegal index.");
         }
 
         Node cur = dummyHead.next;
@@ -160,7 +160,7 @@ public class LinkedList<E> {
 
     /***
      * 从链表中删除index(0-based)位置的元素, 返回删除的元素
-     * 在链表中不是一个常用的操作，练习用：
+     * 在链表中不是一个常用的操作，练习用：）
      * @param index
      * @return
      */
@@ -168,8 +168,6 @@ public class LinkedList<E> {
         if(index < 0 || index >= size) {
             throw new IllegalArgumentException("Remove failed. Index is illegal.");
         }
-
-        // E ret = findNode(index).e; // 两次遍历
 
         Node prev = dummyHead;
         for(int i = 0 ; i < index ; i ++) {
@@ -234,5 +232,27 @@ public class LinkedList<E> {
         res.append("NULL");
 
         return res.toString();
+    }
+
+
+    public static void main(String[] args) {
+
+        LinkedListWithDummyHead<Integer> linkedList = new LinkedListWithDummyHead<>();
+        for(int i = 0 ; i < 5 ; i ++){
+            linkedList.addFirst(i);
+            System.out.println(linkedList);
+        }
+
+        linkedList.add(2, 666);
+        System.out.println(linkedList);
+
+        linkedList.remove(2);
+        System.out.println(linkedList);
+
+        linkedList.removeFirst();
+        System.out.println(linkedList);
+
+        linkedList.removeLast();
+        System.out.println(linkedList);
     }
 }

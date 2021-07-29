@@ -16,6 +16,7 @@
         <module>05-Arrays</module>
         <module>06-Stacks-and-Queues</module>
         <module>07-Linked-List</module>
+        <module>08-Recursion</module>
     </modules>
     <packaging>pom</packaging>
 
