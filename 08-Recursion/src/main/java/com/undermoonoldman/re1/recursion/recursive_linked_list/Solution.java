@@ -3,12 +3,13 @@ package com.undermoonoldman.re1.recursion.recursive_linked_list;
 
 import javafx.util.Pair;
 
-/// Leetcode 20. Valid Parentheses
-/// https://leetcode.com/problems/valid-parentheses/description/
-/// 括号匹配问题
-///
-/// 使用LinkedListRStack测试20号问题
-/// 该代码主要用于使用Leetcode上的问题测试我们的LinkedListR：）
+/***
+ * Leetcode 20. Valid Parentheses
+ * https://leetcode.com/problems/valid-parentheses/description/
+ * 括号匹配问题
+ * 使用LinkedListRStack测试20号问题
+ * 该代码主要用于使用Leetcode上的问题测试我们的LinkedListR：）
+ */
 class Solution {
 
     private class LinkedListR<E> {
@@ -164,8 +165,9 @@ class Solution {
         // 从以node为头结点的链表中，删除第index位置的元素，递归算法
         // 返回值包含两个元素，删除后的链表头结点和删除的值：）
         private Pair<Node, E> remove(Node node, int index){
-            if(index == 0)
+            if(index == 0) {
                 return new Pair<>(node.next, node.e);
+            }
             Pair<Node, E> res = remove(node.next, index - 1);
             node.next = res.getKey();
             return new Pair<>(node, res.getValue());
