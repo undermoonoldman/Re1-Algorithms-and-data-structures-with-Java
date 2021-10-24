@@ -18,6 +18,7 @@
         <module>07-Linked-List</module>
         <module>08-Recursion</module>
         <module>09-MergeSort</module>
+        <module>10-QuickSort</module>
     </modules>
     <packaging>pom</packaging>
 
